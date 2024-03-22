@@ -59,10 +59,12 @@ Dazu müssen wir ein Programm schreiben, das die Datenbank von einer externen [R
 
 - Rufe nun die Funktion `rickMortyCharacters` auf, um das Programm auszuführen!
 
-- .. add a button "Reload" "to fetch another character
+- x add a button "Reload" "to fetch another character
 
 ## BONUS-Aufgabe:
 
-- Wenn Du die Aufgaben früher erledigt hast, kannst du noch ein paar zusätzliche Stilelemente hinzufügen und/oder mehr Daten anzeigen.
+- .. Wenn Du die Aufgaben früher erledigt hast, kannst du noch ein paar zusätzliche Stilelemente hinzufügen und/oder mehr Daten anzeigen.
+
+- add background color to config file: backgroundColor = '#ccc';
 
 #### VIEL GLÜCK! 😉
