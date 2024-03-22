@@ -2,6 +2,7 @@
 import * as tools from './tools.js'; // 2. import namespace "tools" with intellisense
 // import { getRandomIndex } from './tools.js'; // 3. import indvidiaul function as the default
 // import  capitalizeAllLetters from './tools.js';
+import * as appModel from './appModel.js';
 
 const characterElem = document.querySelector('.character');
 
@@ -9,29 +10,17 @@ characterElem.innerHTML = `
 	<h1>Loading...</h1>
 	`;
 
-setTimeout(async () => {
-	try {
-		const response = await fetch('https://rickandmortyapi.com/api/character');
-		const data = await response.json();
-		const characters = data.results;
-		const randomIndex = tools.getRandomIndex(characters.length);
+try {
+	const characters = await appModel.getCharacters();
+	const randomIndex = tools.getRandomIndex(characters.length);
 
-		const character = characters[randomIndex];
+	const character = characters[randomIndex];
 
-		characterElem.innerHTML = `
+	characterElem.innerHTML = `
 		<h1>${tools.capitalizeAllLetters(character.name)}</h1>
 		<img src="${character.image}"/>
 	`;
-	}
-	catch (e) {
-		console.log(e.message);
-		characterElem.innerHTML = `
-		<h1>We're Sorry</h1>
-		<p>At the moment, we are not able to fetch your data. Please contact you administrator at 23487/23437843.</p>
-	`;
-	}
-}, 1000);
-
-
-
-
+}
+catch (e) {
+	characterElem.innerHTML = e.message;
+}
