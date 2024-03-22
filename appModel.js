@@ -7,7 +7,8 @@ export const getCharacters = () => {
 				const response = await fetch('https://rickandmortyapi.com/api/character');
 				const data = await response.json();
 				const characters = data.results;
-				if (response.status === 200) {
+				if (response.ok) {
+				// if (response.status === 200) {
 					resolve(characters);
 				} else {
 					console.log('ERROR', e);
