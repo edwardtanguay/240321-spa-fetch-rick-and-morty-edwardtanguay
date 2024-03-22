@@ -1,3 +1,4 @@
+import { generalErrorMessage } from "./config.js";
 
 export const getCharacters = () => {
 	return new Promise((resolve, reject) => {
@@ -6,11 +7,16 @@ export const getCharacters = () => {
 				const response = await fetch('https://rickandmortyapi.com/api/character');
 				const data = await response.json();
 				const characters = data.results;
-				resolve(characters);
+				if (response.status === 200) {
+					resolve(characters);
+				} else {
+					console.log('ERROR', e);
+					reject({ message: generalErrorMessage() });
+				}
 			}
 			catch (e) {
-				console.log(e.message);
-				reject({ message: '<h1>We\'re Sorry</h1> <p>At the moment, we are not able to fetch your data. Please contact you administrator at 23487/23437843.</p>' });
+				console.log('ERROR', e);
+				reject({ message: generalErrorMessage() });
 			}
 		}, 1000);
 

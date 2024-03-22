@@ -27,8 +27,8 @@ Dazu müssen wir ein Programm schreiben, das die Datenbank von einer externen [R
 - x display picture of character
 
 - x add try/catch
-  - .. put IIFE in its own function
-	- create getCharacterData() and put in appModel.js
+  - x put IIFE in its own function
+  - x create getCharacterData() and put in appModel.js
 ## Aufgabe 3:
 
 - Erstelle eine asynchrone Funktion `rickAndMortyCharacters`.
