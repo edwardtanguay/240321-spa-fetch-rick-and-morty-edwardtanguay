@@ -1,7 +1,7 @@
 // import { getRandomIndex } from './tools.js'; // 1. import individual functions
-// import * as tools from './tools.js'; // 2. import namespace "tools" with intellisense
-import getRandomIndex from './tools.js'; // 3. import indvidiaul function as the default
-import { capitalizeAllLetters } from './tools.js';
+import * as tools from './tools.js'; // 2. import namespace "tools" with intellisense
+// import { getRandomIndex } from './tools.js'; // 3. import indvidiaul function as the default
+// import  capitalizeAllLetters from './tools.js';
 
 const characterElem = document.querySelector('.character');
 
@@ -14,12 +14,12 @@ setTimeout(async () => {
 		const response = await fetch('https://rickandmortyapi.com/api/character');
 		const data = await response.json();
 		const characters = data.results;
-		const randomIndex = getRandomIndex(characters.length);
+		const randomIndex = tools.getRandomIndex(characters.length);
 
 		const character = characters[randomIndex];
 
 		characterElem.innerHTML = `
-		<h1>${capitalizeAllLetters(character.name)}</h1>
+		<h1>${tools.capitalizeAllLetters(character.name)}</h1>
 		<img src="${character.image}"/>
 	`;
 	}

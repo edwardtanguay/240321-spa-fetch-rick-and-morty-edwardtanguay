@@ -11,4 +11,4 @@ export const capitalizeAllLetters = (text) => {
 	return text.toUpperCase();
 }
 
-export default getRandomIndex;
+// export default capitalizeAllLetters;
