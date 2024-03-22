@@ -1,4 +1,17 @@
 export const AdminPanel = () => {
+
+	setTimeout(() => {
+		const backgroundColorSelectionElem = document.querySelector('.backgroundColorSelection');
+		const bodyElem = document.querySelector('body');
+
+		if (backgroundColorSelectionElem) {
+			backgroundColorSelectionElem.addEventListener('change', (e) => {
+				const htmlColor = e.target.value;
+				bodyElem.style.backgroundColor = htmlColor;
+			});
+		}
+	}, 0);
+
 	return /*html*/ `
 <section class="admin">
 	<select class="backgroundColorSelection">
