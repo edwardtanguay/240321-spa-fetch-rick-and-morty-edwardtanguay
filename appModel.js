@@ -3,7 +3,7 @@ export const getCharacters = () => {
 	return new Promise((resolve, reject) => {
 		setTimeout(async () => {
 			try {
-				const response = await fetch('xhttps://rickandmortyapi.com/api/character');
+				const response = await fetch('https://rickandmortyapi.com/api/character');
 				const data = await response.json();
 				const characters = data.results;
 				resolve(characters);
