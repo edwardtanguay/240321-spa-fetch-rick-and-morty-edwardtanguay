@@ -2,13 +2,14 @@ const characterElem = document.querySelector('.character');
 
 const getRandomIndex = (numberOfItems) => {
 	return Math.floor(Math.random() * numberOfItems);
-}
+};
 
-	characterElem.innerHTML = `
+characterElem.innerHTML = `
 	<h1>Loading...</h1>
 	`;
 
-	setTimeout(async () => {
+setTimeout(async () => {
+	try {
 		const response = await fetch('https://rickandmortyapi.com/api/character');
 		const data = await response.json();
 		const characters = data.results;
@@ -19,7 +20,15 @@ const getRandomIndex = (numberOfItems) => {
 		<h1>${character.name}</h1>
 		<img src="${character.image}"/>
 	`;
-	}, 1000);
+	}
+	catch (e) {
+		console.log(e.message);
+		characterElem.innerHTML = `
+		<h1>We're Sorry</h1>
+		<p>At the moment, we are not able to fetch your data. Please contact you administrator at 23487/23437843.</p>
+	`;
+	}
+}, 1000);
 
 
 

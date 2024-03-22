@@ -21,12 +21,12 @@ Dazu müssen wir ein Programm schreiben, das die Datenbank von einer externen [R
 
 - Erstelle in der Datei `script.js` einen Ausdruck, der einen Link mit Informationen über den Charakter enthält. Eine Liste mit allen Charakteren im JSON-Format kannst Du hier herunterladen: [Rick and Morty Charaktere API](https://rickandmortyapi.com/api/character)
 
-- .. get JSON list of characters from URL (https://rickandmortyapi.com/api/character)
-- define a variable as a random character from that list
-- display name of character
-- display picture of character
+- x get JSON list of characters from URL (https://rickandmortyapi.com/api/character)
+- x define a variable as a random character from that list
+- x display name of character
+- x display picture of character
 
-- add try/catch
+- .. add try/catch
 - put IIFE in its own function
 
 ## Aufgabe 3:
