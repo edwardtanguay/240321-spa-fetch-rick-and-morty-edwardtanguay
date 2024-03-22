@@ -63,8 +63,8 @@ Dazu müssen wir ein Programm schreiben, das die Datenbank von einer externen [R
 
 ## BONUS-Aufgabe:
 
-- .. Wenn Du die Aufgaben früher erledigt hast, kannst du noch ein paar zusätzliche Stilelemente hinzufügen und/oder mehr Daten anzeigen.
+- x Wenn Du die Aufgaben früher erledigt hast, kannst du noch ein paar zusätzliche Stilelemente hinzufügen und/oder mehr Daten anzeigen.
 
-- add background color to config file: backgroundColor = '#ccc';
+- .. add background color to config file: backgroundColor = '#ccc';
 
 #### VIEL GLÜCK! 😉
