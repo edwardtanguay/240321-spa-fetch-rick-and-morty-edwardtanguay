@@ -1,0 +1,3 @@
+- make admin area with dropdown with 3 colors and button "change background"
+	- make admin area with mock dropdown 
+- drop menu admin area
