@@ -26,8 +26,8 @@ Dazu müssen wir ein Programm schreiben, das die Datenbank von einer externen [R
 - x display name of character
 - x display picture of character
 
-- .. add try/catch
-- put IIFE in its own function
+- x add try/catch
+- .. put IIFE in its own function
 
 ## Aufgabe 3:
 

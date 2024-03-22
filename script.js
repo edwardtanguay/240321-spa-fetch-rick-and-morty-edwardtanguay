@@ -1,8 +1,9 @@
-const characterElem = document.querySelector('.character');
+// import { getRandomIndex } from './tools.js'; // 1. import individual functions
+// import * as tools from './tools.js'; // 2. import namespace "tools" with intellisense
+import getRandomIndex from './tools.js'; // 3. import indvidiaul function as the default
+import { capitalizeAllLetters } from './tools.js';
 
-const getRandomIndex = (numberOfItems) => {
-	return Math.floor(Math.random() * numberOfItems);
-};
+const characterElem = document.querySelector('.character');
 
 characterElem.innerHTML = `
 	<h1>Loading...</h1>
@@ -14,10 +15,11 @@ setTimeout(async () => {
 		const data = await response.json();
 		const characters = data.results;
 		const randomIndex = getRandomIndex(characters.length);
+
 		const character = characters[randomIndex];
 
 		characterElem.innerHTML = `
-		<h1>${character.name}</h1>
+		<h1>${capitalizeAllLetters(character.name)}</h1>
 		<img src="${character.image}"/>
 	`;
 	}
